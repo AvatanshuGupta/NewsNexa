@@ -36,28 +36,24 @@
 
 
 {% for result in results %}
-  <div class="container text-center my-4">
-    {{ result.title }}
-    {% if result.image_url %}
-    <div>
-      <img class="newsImage" src="{{ result.image_url }}" alt="news image">
+  <div class="news-card container">
+    <div class="news-content">
+      <a href="{{ result.link }}" target="_blank" rel="noopener noreferrer" class="news-title">
+        {{ result.title }}
+      </a>
+      <p class="news-description">
+        {{ result.description|truncatewords:50 }}
+      </p>
     </div>
-    {% else %}
-    <div>
-      <img class="newsImage" src="{% static 'images/fallbackImage.png' %}" alt="fallback image">
-    </div>
-    {% endif %}   
-    <div>
-        {{ result.description }}
-    </div>
-    <div>
-  <a href="{{ result.link }}" target="_blank" rel="noopener noreferrer">
-    Read Full Article
-  </a>
-</div>
 
+    {% if result.image_url %}
+      <img class="newsImage" src="{{ result.image_url }}" alt="news image">
+    {% else %}
+      <img class="newsImage" src="{% static 'images/fallbackImage.png' %}" alt="fallback image">
+    {% endif %}
   </div>
 {% endfor %}
+
     
 </body>
 </html>

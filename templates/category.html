@@ -24,7 +24,7 @@
     </div>
     {% endif %}   
     <div>
-        {{ result.description }}
+    {{ result.description|truncatewords:50 }}
     </div>
     <div>
   <a href="{{ result.link }}" target="_blank" rel="noopener noreferrer">

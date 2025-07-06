@@ -54,6 +54,9 @@
   </div>
 {% endfor %}
 
+{% if nextPage %}
+  <a href="{% url 'nextPage' nextPage %}" class="pagination-button">Next Page</a>
+{% endif %}
     
 </body>
 </html>

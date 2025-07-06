@@ -61,7 +61,7 @@ class api_fetching:
         return complete_data
     
     def fetch_news_by_page(self,nextPage):
-        url=f"https://newsdata.io/api/1/latest?apikey={self.NEWS_API}&nextPage={nextPage}&language=en,hi"
+        url=f"https://newsdata.io/api/1/latest?apikey={self.NEWS_API}&page={nextPage}&language=en,hi"
         data=requests.get(url).json()
         results=data.get('results')
         nextPage=data.get('nextPage')
@@ -71,3 +71,5 @@ class api_fetching:
         }
         return complete_data
     
+
+

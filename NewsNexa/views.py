@@ -54,3 +54,16 @@ def category(request,category):
         'category':cat
         }
     return render(request,"category.html",sent_data)
+
+
+def nextPage(request,nextPage):
+    api=api_fetching()
+    news_data=api.fetch_news_by_page(nextPage=nextPage)
+    results=news_data['results']
+    nextPage=news_data['nextPage']
+    sent_data={
+        'results':results,
+        'nextPage':nextPage
+        }
+    return render(request,"nextPage.html",sent_data)
+    

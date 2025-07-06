@@ -22,5 +22,6 @@ from django.urls import path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("",views.home),
-    path("category/<str:category>/",views.category,name='category_news')
+    path("category/<str:category>/",views.category,name='category_news'),
+    path("nextPage/<int:nextPage>",views.nextPage,name='nextPage')
 ]

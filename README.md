@@ -4,6 +4,13 @@
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live project here 👉 [NewsNexa on Render](https://newsnexa.onrender.com)
+
+---
+
+
 ## 🚀 Features
 
 - 🔍 **Keyword Search** – Easily find articles by typing keywords

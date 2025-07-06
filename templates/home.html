@@ -21,13 +21,13 @@
 </nav>   
 
 
-
+<h1 class="page-title">Explore News by Category</h1>
 
 <div class="container text-center my-4">
-  <h2>Browse Categories</h2>
   {% for category in categories %}
     <a href="{% url 'category_news' category %}" class="btn btn-outline-primary m-2">
-      {{ category|title }}
+      <img src="{% static 'images/categories/'|add:category|add:'.jpg' %}" alt="{{ category }}">
+      <div class="category-label">{{ category|capfirst }}</div>
     </a>
   {% endfor %}
 </div>
